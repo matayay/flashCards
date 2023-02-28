@@ -27,7 +27,7 @@ const App = () => {
         <div className='App'>
             <Header />
             <FlashCard flascard={card} flipped={flipped} updateFlipped={updateFlipped} />
-            <button onClick={setFlashCard}>New</button>
+            <button onClick={setFlashCard}>Next</button>
         </div>
     )
 };

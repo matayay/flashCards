@@ -11,4 +11,8 @@ const Cards = {
     ten:["Name of the North Star", "Polaris"]
 };
 
-export default Cards;
+const flashcards = 
+    [Cards.one, Cards.two, Cards.three, Cards.four, Cards.five, 
+    Cards.six, Cards.seven, Cards.eight, Cards.nine, Cards.ten]
+
+export default flashcards;
