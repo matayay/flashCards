@@ -1,0 +1,9 @@
+.FlashCard {
+    width: 40rem;
+    height: 20rem;
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

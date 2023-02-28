@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Cards from './Cards';
+import '../stylesheets/FlashCard.css';
 
 interface Props {
     flascard: number;
