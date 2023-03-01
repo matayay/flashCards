@@ -1,9 +1,38 @@
 .FlashCard {
     width: 40rem;
     height: 20rem;
-    background-color: rgb(215, 215, 215);
+    background-color: transparent;
+    perspective: 1500px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.FlashCard:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.front {
+    background-color: rgb(215, 215, 215);
+}
+
+.back {
+    background-color: rgb(215, 215, 215);
+    transform: rotateY(180deg);
 }
