@@ -9,3 +9,17 @@
 .Header h1, h2, h3 {
     margin: 0rem;
 }
+
+@media only screen and (max-width: 650px) {
+    .Header h1 {
+        font-size: 1.5rem;
+    }
+
+    .Header h2 {
+        font-size: 1.2rem;
+    }
+
+    .Header h3 {
+        font-size: 1rem;
+    }
+}
