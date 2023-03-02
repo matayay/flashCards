@@ -4,14 +4,20 @@ import '../stylesheets/FlashCard.css';
 
 interface Props {
     flascard: number;
-    flipped: number;
-    updateFlipped: () => void;
+    flip: string;
+    speed: string;
+    controlFlip: () => void;
 };
 
 const FlashCard:FC<Props> = (props) => {
+    const innerStyles = {
+        transform: props.flip,
+        transition: props.speed
+    };
+
     return (
-        <div className='FlashCard'>
-            <div className='inner'>
+        <div className='FlashCard' onClick={props.controlFlip}>
+            <div className='inner' style={innerStyles}>
                 <div className='front'>
                     <h3>{flashcards[props.flascard][0]}</h3>
                 </div>

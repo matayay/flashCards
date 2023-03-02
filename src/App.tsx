@@ -4,29 +4,34 @@ import { useState } from 'react'
 import './stylesheets/App.css'
 
 const App = () => {
-    const [flipped, setFlipped] = useState(0);
-    const updateFlipped = () => {
-        if (flipped == 1)
+    const [speed, setSpeed] = useState("0.8s");
+
+    const [flip, setFlip] = useState("none");
+    const controlFlip = () => {
+        if (flip == "none")
         {
-            setFlipped(0);
+            setFlip("rotateY(180deg)");
         }
 
         else
         {
-            setFlipped(1);
+            setFlip("none");
         }
+
+        setSpeed("0.8s");
     };
 
-    const [card, setCard] = useState(0);
+    const [card, setCard] = useState(Math.floor(Math.random() * 10));
     const setFlashCard = () => {
-        setCard(Math.floor(Math.random() * 10))
-        setFlipped(0);
+        setCard(Math.floor(Math.random() * 10)) 
+        setFlip("none");
+        setSpeed("0s");
     };
 
     return (
         <div className='App'>
             <Header />
-            <FlashCard flascard={card} flipped={flipped} updateFlipped={updateFlipped} />
+            <FlashCard flascard={card} flip={flip} speed={speed} controlFlip={controlFlip} />
             <button onClick={setFlashCard}>Next</button>
         </div>
     )
