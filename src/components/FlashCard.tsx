@@ -18,10 +18,10 @@ const FlashCard:FC<Props> = (props) => {
     return (
         <div className='FlashCard' onClick={props.controlFlip}>
             <div className='inner' style={innerStyles}>
-                <div className='front'>
+                <div className='front' style={{backgroundColor: flashcards[props.flascard][2]}}>
                     <h3>{flashcards[props.flascard][0]}</h3>
                 </div>
-                <div className='back'>
+                <div className='back' style={{backgroundColor: flashcards[props.flascard][2]}}>
                     <h3>{flashcards[props.flascard][1]}</h3>
                 </div>
             </div>
