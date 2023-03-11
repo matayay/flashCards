@@ -9,8 +9,8 @@ interface Props {
 const CardButtons:FC<Props> = (props) => {
     return (
         <div className="CardButtons">
-            <button onClick={props.backward}>Previous</button>
-            <button onClick={props.forward}>Next</button>
+            <button onClick={props.backward}>&larr;</button>
+            <button onClick={props.forward}>&rarr;</button>
         </div>
     )
 };

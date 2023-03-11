@@ -5,7 +5,7 @@ import { useState } from 'react'
 import './stylesheets/App.css'
 
 const App = () => {
-    const [speed, setSpeed] = useState("0.8s");
+    const [speed, setSpeed] = useState("0s");
 
     const [flip, setFlip] = useState("none");
     const controlFlip = () => {
