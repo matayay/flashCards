@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import FlashCard from './components/FlashCard';
+import CardButtons from './components/CardButtons';
 import { useState } from 'react'
 import './stylesheets/App.css'
 
@@ -21,18 +22,30 @@ const App = () => {
         setSpeed("0.8s");
     };
 
-    const [card, setCard] = useState(Math.floor(Math.random() * 10));
-    const setFlashCard = () => {
-        setCard(Math.floor(Math.random() * 10)) 
-        setFlip("none");
-        setSpeed("0s");
+    const [card, setCard] = useState(0);
+    const forward = () => {
+        if (card != 9)
+        {
+            setCard(card + 1);
+            setFlip("none");
+            setSpeed("0s");
+        }
+    };
+
+    const backward = () => {
+        if (card != 0)
+        {
+            setCard(card - 1);
+            setFlip("none");
+            setSpeed("0s");
+        }
     };
 
     return (
         <div className='App'>
             <Header />
             <FlashCard flascard={card} flip={flip} speed={speed} controlFlip={controlFlip} />
-            <button onClick={setFlashCard}>Next</button>
+            <CardButtons forward={forward} backward={backward} />
         </div>
     )
 };
