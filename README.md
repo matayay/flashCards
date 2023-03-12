@@ -1,42 +1,37 @@
-# Web Development Project 2 - *Flash Cards*
+# Web Development Project 3 - *Flash Cards*
 
 Submitted by: **Matayay Karuna**
 
-This web app: **Webpage with a flashcard that when clicked on will reveal the other side.**
+This web app: **Flashcard app that allows the clicking on of flashcards to reveal the other side.
+The user may also enter a guess before flipping their card to build up a streak. Cards are in a linear order.**
 
-Time spent: **7.5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [x] Cards have different visual styles such as color based on their category
-  - [x] *green, yellow, and red backgrounds to represent the difficulty of the question*
-
-The following **additional** features are implemented:
-
-* [x] Cards do a 3D flip when clicked on.
-* [x] Mobile compatible.
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [x] A counter displays the user's current and longest streak of correct responses
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-![](./src/assets/flashCardDemo.gif)
+![](./src/assets/flashCardTwo.gif)
 
-GIF created with Kap
+GIF created with Kap 
 
 ## Notes
 
-Creating the 3D flip was somewhat challenging.
+N/A
 
 ## License
 
