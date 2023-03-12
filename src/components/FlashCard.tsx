@@ -4,10 +4,16 @@ import Guess from './Guess';
 import '../stylesheets/FlashCard.css';
 
 interface Props {
+    borderColor: string;
     flascard: number;
     flip: string;
     speed: string;
+    currentStreak: number;
+    longestStreak: number;
     controlFlip: () => void;
+    setBorderColor: (A: string) => void; 
+    setCurrentStreak: (A: number) => void;
+    setLongestStreak: (A: number) => void;
 };
 
 const FlashCard:FC<Props> = (props) => {
@@ -29,7 +35,16 @@ const FlashCard:FC<Props> = (props) => {
                 </div>
             </div>
 
-            <Guess />
+            <Guess 
+                flascard={props.flascard} 
+                speed={props.speed} 
+                borderColor={props.borderColor} 
+                setBorderColor={props.setBorderColor} 
+                currentStreak={props.currentStreak}
+                longestStreak={props.longestStreak}
+                setCurrentStreak={props.setCurrentStreak}
+                setLongestStreak={props.setLongestStreak}
+            />
         </div>
     )
 };
